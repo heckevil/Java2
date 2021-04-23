@@ -12,11 +12,14 @@ package Ch05;
 
 class C03Parent {
 	int x;
+	void print() {};
+	
 }
 
 class C03Son1 extends C03Parent {
 	int y; //확장
-	void ShowPrint() {
+	
+	void Print() { //par는 모르는 메소드지만 오버라이딩을 사용하여 접근가능
 		System.out.println("Son1에서 print 함수 사용");
 	}
 }
@@ -43,6 +46,9 @@ public class C02UpCasting {
 		obj1.y =20;
 		par.x=100;
 		//par.y=200;
+		par.print();//par는 모르는 메소드지만 오버라이딩을 사용하여 접근가능
+		
+		
 		
 		par = obj2; //upcasting
 		par.x=20;
